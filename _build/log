@@ -1,0 +1,5 @@
+# dune init proj real_world_ocaml
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Workspace root: /home/tim/Documents/personal/23/10/real_world_ocaml
+# Auto-detected concurrency: 16
