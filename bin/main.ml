@@ -1,1 +1,3 @@
-let () = Real_world_ocaml.Lists_and_patterns.lists_and_patterns ()
+open Real_world_ocaml.My_module
+
+let () = say_hi_to (init "Tim" 28)
