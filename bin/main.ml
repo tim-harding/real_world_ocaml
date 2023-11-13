@@ -1,3 +1,3 @@
-open Real_world_ocaml.My_module
+open Real_world_ocaml.Records
 
-let () = say_hi_to (init "Tim" 28)
+let () = run ()
