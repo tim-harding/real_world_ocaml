@@ -1,3 +1,3 @@
-open Real_world_ocaml.Records
+open Real_world_ocaml.Variants
 
 let () = run ()
