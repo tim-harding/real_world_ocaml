@@ -15,7 +15,7 @@ let print_numbered_line { item; line_number = n } = printf "%d: %s\n" n item
 
 (* Modules help disambiguate types with the same fields *)
 module Patient = struct
-  type t = { id : string; name : string }
+  type t = { id : string; name : string } [@@deriving fields]
 end
 
 module Doctor = struct
@@ -24,19 +24,15 @@ end
 
 let _make_patient id name = { Patient.id; name }
 
-(* Can also qualify a field by a module name *)
+(* Can also qualify a field by a module name... *)
 let _patient_id t = t.Patient.id
+
+(* ...or, with the fields derive, like this *)
+let _patient_id t = Patient.id t
 
 (* Partial update *)
 let _update_patient_id (patient : Patient.t) id = { patient with id }
 let _update_doctor_id (doctor : Doctor.t) id = doctor.id <- id
-
-(*
-    TODO: First-class fields didn't work for me because I couldn't get 
-    #require "ppx_jane";;
-    to work for me. Come back to this later and learn more about derives.
-    https://dev.realworldocaml.org/records.html#scrollNav-6
-*)
 
 let run () =
   parse_lines (fun s -> s) "Things\nand\nstuff"
