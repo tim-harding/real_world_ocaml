@@ -1,4 +1,4 @@
 (library
  (name real_world_ocaml)
  (preprocess (pps ppx_jane))
- (libraries base stdio))
+ (libraries base stdio core_kernel))

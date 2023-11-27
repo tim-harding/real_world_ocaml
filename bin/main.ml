@@ -1,3 +1,3 @@
-open Real_world_ocaml.Imperative_programming
+open Real_world_ocaml.Gadt
 
 let () = run ()
