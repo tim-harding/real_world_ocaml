@@ -1,3 +1,3 @@
-open Real_world_ocaml.First_class_modules
+open Real_world_ocaml.Objects
 
 let () = run ()
